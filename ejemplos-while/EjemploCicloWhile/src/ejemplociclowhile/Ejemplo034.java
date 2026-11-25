@@ -28,6 +28,13 @@ public class Ejemplo034 {
 
         System.out.println("Ingrese el límite a procesar:");
         limite = entrada.nextInt();
+        
+        if(limite > 0 && limite == 10){
+            System.out.println("Correcto");
+        }else{
+            System.out.println("Límite incorrecto");
+            limite = 3;
+        }
 
         while (contador <= limite) {
             System.out.println("Ingrese el valor a sumar");
