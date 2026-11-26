@@ -13,30 +13,45 @@ import java.util.Scanner;
  * @author Usuario
  */
 public class Ejemplo063 {
-    
+
     public static void main(String[] args) {
-        
+
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        
+
         boolean bandera = true;
-        
-        while(bandera == true){
-            System.out.println("Estoy en el ciclo");//Estoy en el ciclo
-            
+        int contador = 0;
+        int limite = 5;
+        String pais;
+        String capital;
+        String reporte;
+        String cadenaFinal = "";
+
+        while (bandera == true) {
+            contador = contador + 1;
+
+            System.out.println("Ingrese el país " + contador + ":");
+            pais = entrada.nextLine();
+
+            System.out.println("Ingrese la capital de " + pais + ":");
+            capital = entrada.nextLine();
+
+            cadenaFinal = cadenaFinal + pais + " - " + capital + "\n";
+
             String salir;
             System.out.println("Desea salir del ciclo, ingrese si.");
             salir = entrada.nextLine();
-            if(salir.equals("si")){
+            if (salir.equals("si")) {
+                bandera = false;
+            }
+
+            if (contador == limite) {
                 bandera = false;
             }
         }
-        
+                reporte = String.format("Listado de Países y Capitales:\n%sTotal ingresados: %d",
+                cadenaFinal, contador);
+
+        System.out.printf("%s\n",reporte);
     }
 }
-/*
-Acabamos de crear un ciclo infinito pero lo redujimos con una condición if
-para decirle al ususario que si quiere salir que anote -100. Si anota otro 
-número que no es -100 seguirá en el ciclo infinitamente. Ahora cuando usamos 
-números ponemos ==, cuando ponemos string es equals.
-*/
