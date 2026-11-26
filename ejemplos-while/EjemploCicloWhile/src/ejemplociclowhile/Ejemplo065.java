@@ -49,5 +49,6 @@ public class Ejemplo065 {
     }
 }
 /*
-
+Error encontrado, hubo un error, no había un nextline y por eso no hubo una
+limpieza del buffer, hay que incluirlo para cambiar de entero a cadena.
 */
