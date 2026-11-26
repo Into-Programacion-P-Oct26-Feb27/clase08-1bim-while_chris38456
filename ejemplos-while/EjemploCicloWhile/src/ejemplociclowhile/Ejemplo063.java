@@ -49,7 +49,7 @@ public class Ejemplo063 {
                 bandera = false;
             }
         }
-                reporte = String.format("Listado de Países y Capitales:\n%sTotal ingresados: %d",
+                reporte = String.format("Listado de Países y Capitales:\n%s",
                 cadenaFinal, contador);
 
         System.out.printf("%s\n",reporte);
